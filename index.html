@@ -15,29 +15,32 @@
 
     <style>
         @import url('https://fonts.googleapis.com/css?family=Montserrat');
-.container p span.typed-text {
+span.typed-text {
   font-weight: normal;
-  color: #dd7732;
+  color: #15fa00;
+  font-weight: bold;
 }
-p .animation_p{
-    font-size: 50px;
-}
-.container p span.cursor {
+.animation_p{
   display: inline-block;
-  background-color: #ccc;
+  font-size: 50px;
+  font-weight: bold;
+}
+span.cursor {
+  display: inline-block;
+  background-color: rgb(51, 248, 1);
   margin-left: 0.1rem;
-  width: 3px;
+  width: 5px;
   animation: blink 1s infinite;
 }
-.container p span.cursor.typing {
+span.cursor.typing {
   animation: none;
 }
 @keyframes blink {
-  0%  { background-color: #ccc; }
-  49% { background-color: #ccc; }
+  0%  { background-color: rgb(61, 231, 9); }
+  49% { background-color: rgb(61, 231, 9); }
   50% { background-color: transparent; }
   99% { background-color: transparent; }
-  100%  { background-color: #ccc; }
+  100%  { background-color: rgb(61, 231, 9); }
 }
     </style>
   </head>
@@ -94,7 +97,7 @@ p .animation_p{
                 <div class="col-7">
                   <div class="text-center mt-5">
                     <h2 class="heading display-4 font-weight-400 text-white mt-5 animated" data-animation-in="fadeInUp" data-animation-delay="2000">
-                        <p class="animation_p">Coding is <span class="typed-text"></span><span class="cursor">&nbsp;</span></p>>
+                        <p class="animation_p">70 Years of&nbsp;</p><span class="typed-text"></span><span class="cursor">&nbsp;</span>
                     </h2>
                   </div>
                 </div>
@@ -108,7 +111,7 @@ p .animation_p{
         const typedTextSpan = document.querySelector(".typed-text");
         const cursorSpan = document.querySelector(".cursor");
 
-        const textArray = ["hard", "fun", "a journey", "LIFE"];
+        const textArray = ["Passion", "Service", "Inspiration", "Legacy"];
         const typingDelay = 200;
         const erasingDelay = 100;
         const newTextDelay = 2000; // Delay between current and next text
