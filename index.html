@@ -14,11 +14,15 @@
     <link type="text/css" href="./assets/css/demo.css" rel="stylesheet">
 
     <style>
-        @import url('https://fonts.googleapis.com/css?family=Montserrat');
+        @import url('https://fonts.googleapis.com/css2?family=Castoro');
 span.typed-text {
-  font-weight: normal;
   color: #10be00;
-  font-weight: bold;
+  position: relative;
+  font-size: 50px;
+  color: white;
+  top: -130px;
+  left: 100px;
+  font-family: 'Castoro', serif;
 }
 .animation_p{
   display: inline-block;
@@ -29,7 +33,12 @@ span.cursor {
   display: inline-block;
   background-color: rgb(51, 248, 1);
   margin-left: 0.1rem;
-  width: 5px;
+  width: 3px;
+  font-size: 50px;
+  position: relative;
+  color: white;
+  top: -130px;
+  left: 100px;
   animation: blink 1s infinite;
 }
 span.cursor.typing {
@@ -45,6 +54,36 @@ span.cursor.typing {
 
 .bg-primary {
     background-color: #030303 !important;
+}
+.text_70{
+  font-size: 150px;
+  color: white;
+  display: inline-block;
+  font-family: 'Castoro', serif;
+}
+.year{
+  position: relative;
+  font-size: 50px;
+  color: white;
+  top: -50px;
+  left: 20px;
+  font-family: 'Castoro', serif;
+}
+
+@media screen and (max-width: 380px) {
+  .year{
+    font-size: 20px;
+}
+.text_70{
+  font-size: 70px;
+}
+span.typed-text {
+
+  font-size: 20px;
+}
+span.cursor {
+  font-size: 20px;
+}
 }
     </style>
   </head>
@@ -100,9 +139,8 @@ span.cursor.typing {
               <div class="row cols-xs-space align-items-center text-center text-md-left justify-content-center">
                 <div class="col-7">
                   <div class="text-center mt-5">
-                    <h2 class="heading display-4 font-weight-400 text-white mt-5 animated" data-animation-in="fadeInUp" data-animation-delay="2000">
-                        <p class="animation_p">70 Years of&nbsp;</p><span class="typed-text"></span><span class="cursor">&nbsp;</span>
-                    </h2>
+                    <div><p class="text_70">70</p><span class="year">YEARS OF</span><p><span class="typed-text"></span><span class="cursor">&nbsp;</span></p></div>
+                    
                   </div>
                 </div>
               </div>
@@ -115,7 +153,7 @@ span.cursor.typing {
         const typedTextSpan = document.querySelector(".typed-text");
         const cursorSpan = document.querySelector(".cursor");
 
-        const textArray = ["Passion", "Service", "Inspiration", "Legacy"];
+        const textArray = ["PASSION", "SERVICE", "INSPIRATION", "LEAGACY"];
         const typingDelay = 200;
         const erasingDelay = 100;
         const newTextDelay = 2000; // Delay between current and next text
